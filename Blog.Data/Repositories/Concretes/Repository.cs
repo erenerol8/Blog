@@ -78,5 +78,10 @@ namespace Blog.Data.Repositories.Concretes
         {
             return await Table.CountAsync(predicate);
         }
+
+        Task<T> IRepository<T>.DeleteAsync(T entity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
