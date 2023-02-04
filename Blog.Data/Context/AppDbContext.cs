@@ -21,7 +21,7 @@ namespace Blog.Data.Content
 
         }
 
-        public DbSet<Article> Articles { get; set; }
+        public DbSet<ArticleDTO> Articles { get; set; }
 
         public DbSet<Category> Categories { get; set; }
 

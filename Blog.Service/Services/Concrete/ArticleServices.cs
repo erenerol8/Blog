@@ -1,4 +1,5 @@
-﻿using Blog.Data.UnitOfWorks;
+﻿using AutoMapper;
+using Blog.Data.UnitOfWorks;
 using Blog.Entity.Entities;
 using Blog.Service.Services.Abstractions;
 using System;
@@ -12,13 +13,18 @@ namespace Blog.Service.Services.Concrete
     public class ArticleServices : IArticleServices
     {
         private readonly IUnitOfWork unitOfWork;
-        public ArticleServices(IUnitOfWork unitOfWork)
+        private readonly IMapper mapper;
+
+        public ArticleServices(IUnitOfWork unitOfWork, IMapper mapper)
         {
             this.unitOfWork = unitOfWork;
+            this.mapper = mapper;
         }
-        public async Task<List<Article>> GetAllArticlesAsync()
+        public async Task<List<ArticleDTO>> GetAllArticlesAsync()
         {
-            return await unitOfWork.GetRepository<Article>().GetAllAsync(); 
+            var articles =  await unitOfWork.GetRepository<ArticleDTO>().GetAllAsync();
+            var map = mapper.Map<List<ArticleDTO>>(articles);
+            return map;
         }
     }
 }

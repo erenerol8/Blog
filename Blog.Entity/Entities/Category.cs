@@ -11,7 +11,7 @@ namespace Blog.Entity.Entities
     {
        
         public string Name { get; set; }
-        public ICollection<Article> Articles { get; set; }
+        public ICollection<ArticleDTO> Articles { get; set; }
 
     }
 }

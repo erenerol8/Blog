@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Blog.Entity.Entities
 {
-    public class Article : EntityBase 
+    public class ArticleDTO : EntityBase 
     {
       
         public string Title { get; set; }

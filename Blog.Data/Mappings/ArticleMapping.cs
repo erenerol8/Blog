@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Blog.Data.Mappings
 {
-    public class ArticleMapping : IEntityTypeConfiguration<Article>
+    public class ArticleMapping : IEntityTypeConfiguration<ArticleDTO>
     {
-        public void Configure(EntityTypeBuilder<Article> builder)
+        public void Configure(EntityTypeBuilder<ArticleDTO> builder)
         {
-            builder.HasData(new Article
+            builder.HasData(new ArticleDTO
             {
                 Id = Guid.NewGuid(),
                 Title = "ASP.NET Core Deneme Makalesi",
@@ -25,7 +25,7 @@ namespace Blog.Data.Mappings
                 CreatedDate = DateTime.Now,
                 IsDeleted = false,
             },
-            new Article
+            new ArticleDTO
             {
                 Id = Guid.NewGuid(),
                 Title = "Entity Framework Core Deneme Makalesi",

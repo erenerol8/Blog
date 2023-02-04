@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
 
 namespace Blog.Service.Extensions
 {
@@ -18,6 +19,8 @@ namespace Blog.Service.Extensions
     {
         public static IServiceCollection LoadServiceLayerExtension(this IServiceCollection services)
         {
+            var assembly = Assembly.GetExecutingAssembly();
+            services.AddAutoMapper(assembly);
             services.AddScoped<IArticleServices, ArticleServices>();
             return services;
         }
