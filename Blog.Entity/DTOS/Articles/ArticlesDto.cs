@@ -14,5 +14,6 @@ namespace Blog.Entity.DTOS.Articles
         public int ViewCount { get; set; }
         public DateTime CreatedDate { get; set; }   
         public string CreatedBy { get; set; }
+        public string Image { get; set; }
     }
 }
