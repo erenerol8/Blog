@@ -20,10 +20,10 @@ namespace Blog.Service.Services.Concrete
             this.unitOfWork = unitOfWork;
             this.mapper = mapper;
         }
-        public async Task<List<ArticleDTO>> GetAllArticlesAsync()
+        public async Task<List<Article>> GetAllArticlesAsync()
         {
-            var articles =  await unitOfWork.GetRepository<ArticleDTO>().GetAllAsync();
-            var map = mapper.Map<List<ArticleDTO>>(articles);
+            var articles =  await unitOfWork.GetRepository<Article>().GetAllAsync();
+            var map = mapper.Map<List<Article>>(articles);
             return map;
         }
     }

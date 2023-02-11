@@ -54,13 +54,14 @@ namespace Blog.Data.Mappings
                 UserName = "superadmin@gmail.com",
                 NormalizedUserName = "SUPERADMIN@GMAIL.COM",
                 Email = "superadmin@gmail.com",
-                NormalizedEmail = "SUPERADMIN@gmail.com",
+                NormalizedEmail = "SUPERADMIN@GMAIL.COM",
                 PhoneNumber = "1234567890",
                 FirstName = "Eren",
                 LastName = "Erol",
                 PhoneNumberConfirmed = true,
                 EmailConfirmed= true,
                 SecurityStamp = Guid.NewGuid().ToString(),
+                ImageId = Guid.Parse("4F4E212407AF42F9A3619D47B944193E"),
 
             };
             superadmin.PasswordHash = CreatePasswordHash(superadmin, "123456");
@@ -68,16 +69,17 @@ namespace Blog.Data.Mappings
             var admin = new AppUser
             {
                 Id = Guid.Parse("1ED47A79-F320-46F9-B79D-5B563A9EA703"),
-                UserName = "admin@gmail.com",
+                UserName = "admin@gmail.com", 
                 NormalizedUserName = "ADMIN@GMAIL.COM",
                 Email = "admin@gmail.com",
-                NormalizedEmail = "ADMIN@gmail.com",
+                NormalizedEmail = "ADMIN@GMAIL.COM",
                 PhoneNumber = "356897850",
                 FirstName = "Can",
                 LastName = "Admin",
                 PhoneNumberConfirmed = false,
                 EmailConfirmed = false,
                 SecurityStamp = Guid.NewGuid().ToString(),
+                ImageId = Guid.Parse("4F4E212407AF42F9A3619D47B944193E"),
             };
 
             admin.PasswordHash = CreatePasswordHash(admin, "654321");

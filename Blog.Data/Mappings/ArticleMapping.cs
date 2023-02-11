@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Blog.Data.Mappings
 {
-    public class ArticleMapping : IEntityTypeConfiguration<ArticleDTO>
+    public class ArticleMapping : IEntityTypeConfiguration<Article>
     {
-        public void Configure(EntityTypeBuilder<ArticleDTO> builder)
+        public void Configure(EntityTypeBuilder<Article> builder)
         {
-            builder.HasData(new ArticleDTO
+            builder.HasData(new Article
             {
                 Id = Guid.NewGuid(),
                 Title = "ASP.NET Core Deneme Makalesi",
@@ -24,8 +24,9 @@ namespace Blog.Data.Mappings
                 CreatedBy = "Admin Test",
                 CreatedDate = DateTime.Now,
                 IsDeleted = false,
+                UserId = Guid.Parse("90DF825A-2D77-4586-9F8F-7BBC82EB3C16"),
             },
-            new ArticleDTO
+            new Article
             {
                 Id = Guid.NewGuid(),
                 Title = "Entity Framework Core Deneme Makalesi",
@@ -36,6 +37,7 @@ namespace Blog.Data.Mappings
                 CreatedBy = "Admin Test",
                 CreatedDate = DateTime.Now,
                 IsDeleted = false,
+                UserId = Guid.Parse("1ED47A79-F320-46F9-B79D-5B563A9EA703"),
             }
           );
         }
