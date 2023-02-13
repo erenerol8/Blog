@@ -60,7 +60,7 @@ namespace Blog.Web.Areas.Admin.Controllers
         public async Task<IActionResult> Logout()
         {
             await signInManager.SignOutAsync();
-            return RedirectToAction("Index", "Home", new { area = "" });
+            return RedirectToAction("Index", "Home", new { Area = "" });
         }
     }
 }
