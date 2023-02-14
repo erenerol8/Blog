@@ -1,4 +1,5 @@
-﻿using Blog.Entity.Entities;
+﻿using Blog.Entity.DTOS.Article;
+using Blog.Entity.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,6 @@ namespace Blog.Service.Services.Abstractions
 {
     public interface IArticleServices
     {
-        Task<List<Article>> GetAllArticlesAsync();
-       
+        Task<List<ArticleDto>> GetAllArticlesWithCategoryNonDeletedAsync();
     }
 }

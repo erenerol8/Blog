@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Blog.Entity.DTOS.Articles;
+using Blog.Entity.DTOS.Article;
 using Blog.Entity.Entities;
 using System;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ namespace Blog.Service.AutoMapper.Articles
     {
         public ArticleProfiles() 
         {
-            CreateMap<ArticlesDto, Article>().ReverseMap();        
+            CreateMap<ArticleDto, Article>().ReverseMap();        
         }
     }
 }

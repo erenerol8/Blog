@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Blog.Entity.DTOS.Articles.Users
+namespace Blog.Entity.DTOS.Users
 {
     public class UserLoginDto
     {

@@ -1,4 +1,4 @@
-﻿using Blog.Entity.DTOS.Articles.Users;
+﻿using Blog.Entity.DTOS.Users;
 using Blog.Entity.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
